@@ -10,7 +10,7 @@ internal class Settings : IPluginConfiguration
     [UI("Moving Distance")]
     public float Distance { get; set; } = 3;
     public int Version { get; set; } = 1;
-    public uint MountId { get; set; } = 0;
+    public uint MountId { get; set; } = 83;
     public float QuestGetterRange { get; set; } = 10;
     public float TalkSolverTalkDelay { get; set; } = 10;
     public float TalkSolverCutSceneTalkDelay { get; set; } = 3;
