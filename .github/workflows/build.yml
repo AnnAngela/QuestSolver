@@ -22,8 +22,9 @@ jobs:
         run: dotnet restore
           
       - name: Download Dalamud
+        # https://goatcorp.github.io/dalamud-distrib/latest.zip
         run: |
-          Invoke-WebRequest -Uri https://goatcorp.github.io/dalamud-distrib/latest.zip -OutFile latest.zip
+          Invoke-WebRequest -Uri  https://raw.githubusercontent.com/goatcorp/dalamud-distrib/f6fe5567488748319ec1e4b3ba45d4b8835f9525/latest.zip -OutFile latest.zip
           Expand-Archive -Force latest.zip "$env:AppData\XIVLauncher\addon\Hooks\dev"
                       
       - name: Build Plugin
